@@ -2,7 +2,23 @@ html{
     scroll-behavior:smooth;
 }
 
-
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+        clip-path: inset(100%, 100%, 0, 0);
+    }
+    to{
+        opacity: 1;
+         /* scale: 1;  */
+        clip-path: inset(0, 0, 0, 0);
+    }
+}
+.card, #about-us, .col-md-4 , .wrapper-1{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
 .navbar-brand{
     display: flex;
 }
@@ -120,7 +136,7 @@ footer{
 footer h3{
     font-family: sans-serif,'Times New Roman', Times, serif;
     border-bottom: #a8a8a84b solid 4px;
-    font-size: 25px;
+    font-size: 19px;
     font-weight: bold;
     width: 200px;
     color: #ff4500;
@@ -136,6 +152,7 @@ footer h3{
 }
 .quicklinks ul li a{
     color: #ffffff;
+    font-size: 15px;
 }
 .quicklinks ul li a:hover{
     color: #ff4500;
